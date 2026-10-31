@@ -1,0 +1,410 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background: #f5f7fb;
+    color: #243047;
+}
+
+:root {
+    --primary: #2563eb;
+    --dark: #172554;
+    --light: #eff6ff;
+    --text: #64748b;
+}
+
+/* NAVIGATION */
+header {
+    background: white;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 9%;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.logo span,
+h1 span,
+section h2 span {
+    color: var(--primary);
+}
+
+.navbar ul {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #334155;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: var(--primary);
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 85vh;
+    padding: 80px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    background: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.welcome {
+    color: var(--primary);
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-size: 52px;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.hero h2 {
+    font-size: 23px;
+    color: #475569;
+    margin-bottom: 20px;
+}
+
+.hero-content > p:not(.welcome) {
+    color: var(--text);
+    line-height: 1.9;
+    margin-bottom: 25px;
+}
+
+.profile img {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 7px solid var(--light);
+    box-shadow: 0 10px 35px rgba(37,99,235,0.18);
+}
+
+/* BUTTONS */
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 24px;
+    background: var(--primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 7px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #1d4ed8;
+    transform: translateY(-3px);
+}
+
+.btn.secondary {
+    background: white;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+.social {
+    display: flex;
+    gap: 22px;
+    margin-top: 28px;
+}
+
+.social a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* COMMON SECTIONS */
+.section,
+.about {
+    padding: 75px 10%;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 34px;
+    color: var(--dark);
+    margin-bottom: 45px;
+}
+
+/* ABOUT */
+.about {
+    background: var(--light);
+    text-align: center;
+}
+
+.about p {
+    max-width: 850px;
+    margin: auto;
+    line-height: 2;
+    color: var(--text);
+    font-size: 16px;
+}
+
+/* EDUCATION & CERTIFICATIONS */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.card {
+    background: white;
+    padding: 28px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    border-color: #93c5fd;
+    box-shadow: 0 8px 22px rgba(37,99,235,0.10);
+}
+
+.card h3 {
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-size: 20px;
+}
+
+.card h4 {
+    margin-bottom: 10px;
+    color: var(--dark);
+}
+
+.card p {
+    color: var(--text);
+    line-height: 1.8;
+    margin-bottom: 5px;
+}
+
+.icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
+
+.certificate a {
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    color: var(--primary);
+    font-weight: bold;
+}
+
+.certificate a:hover {
+    text-decoration: underline;
+}
+
+/* PROJECTS */
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.project-card {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.04);
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--primary);
+}
+
+.project-number {
+    color: #93c5fd;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.project-card h3 {
+    font-size: 21px;
+    color: var(--dark);
+    margin: 15px 0;
+}
+
+.project-tech {
+    color: var(--primary) !important;
+    font-weight: bold;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.project-card p {
+    color: var(--text);
+    line-height: 1.9;
+}
+
+.year {
+    display: inline-block;
+    margin-top: 20px;
+    background: var(--light);
+    color: var(--primary);
+    padding: 8px 15px;
+    border-radius: 20px;
+    font-size: 13px;
+}
+
+/* CONTACT */
+.contact {
+    background: var(--light);
+    text-align: center;
+}
+
+.contact p {
+    color: var(--text);
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.contact-links a {
+    background: var(--primary);
+    color: white;
+    padding: 14px 25px;
+    border-radius: 7px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.contact-links a:hover {
+    background: #1e40af;
+    transform: translateY(-3px);
+}
+
+/* FOOTER */
+footer {
+    background: var(--dark);
+    color: white;
+    text-align: center;
+    padding: 25px;
+    line-height: 2;
+    font-size: 14px;
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 850px) {
+
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column-reverse;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .hero-buttons,
+    .social {
+        justify-content: center;
+    }
+
+    .profile img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .card-container,
+    .project-container {
+        grid-template-columns: 1fr;
+    }
+
+    .section,
+    .about {
+        padding: 55px 7%;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .navbar ul {
+        gap: 12px;
+    }
+
+    .navbar ul li a {
+        font-size: 12px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero h2 {
+        font-size: 19px;
+    }
+
+    section h2 {
+        font-size: 27px;
+    }
+
+    .card,
+    .project-card {
+        padding: 22px;
+    }
+}
